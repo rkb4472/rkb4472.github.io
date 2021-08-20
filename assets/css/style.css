@@ -1,0 +1,395 @@
+/* RENEE BOGDANY PORTFOLIO STYLES */
+
+/* DESKTOP STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    /* background-color: rgb(243, 243, 252); */
+}
+
+/* Font */
+
+/* @font-face {
+    font-family: 'EBGaramond-Regular';
+    src: url("../fonts/EBGaramond-Regular.ttf") format('truetype');
+} */
+
+/* headings, paragraph, links */
+
+h1, h2, h3, p, a, li {
+    font-family: 'Roboto Slab', Georgia, 'Montserrat', sans-serif;
+}
+p, li {
+    line-height: 2em;
+}
+a:link {
+    color: black;
+
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+
+/* top of page */
+
+.top {
+    margin-left: 20%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.top2 {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    width: 1306px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rlogo {
+    float: left;
+    padding-right: 2em;
+}
+
+/* Bogdany Pic */
+
+.bogdanyPic {
+    float: left;
+    border-radius: 50%;
+    margin-top: .75em;
+    margin-bottom: .75em;
+    /* margin-left: 20%; */
+    margin-right: 2.5em;
+}
+
+/* Heading / Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+}
+nav a:hover {
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+}
+
+/* Intro */
+
+.intro {
+    /* height: 280px; */
+    /* background-color: rgb(120, 143, 192); */
+    /* background-color: rgb(243, 243, 252); */
+    /* background-color:  rgb(238, 162, 162); */
+    /* rgb(238, 162, 162); */
+}
+.topLine {
+    margin-top: 1em;
+}
+.textIntro {
+    padding-top: .5em;
+    padding-left: 1em;
+    line-height: 2.5em;
+    /* margin-right: 20%; */
+}
+.introPicAndText {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.links {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.email {
+    text-decoration: none;
+    color: black;
+    cursor: auto;
+}
+.email:visited {
+    color: black;
+}
+.email:hover {
+    color: black;
+}
+.email:active {
+    color: black;
+}
+
+/* Projects */
+.proj {
+    width: 1306px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.projects {
+    display: grid;
+    gap: 107px;
+    /* flex-wrap: wrap; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+    grid-template-columns: 600px 600px;
+    grid-template-areas: "project1 project2"
+                         "project3";
+    width: 1306px;
+}
+.project1 {
+    grid-area: "project1";
+}
+.project2 {
+    grid-area: "project2";
+}
+.project3 {
+    grid-area: "project3";
+}
+.projects div {
+    /* background-color: #bdaed6; */
+    /* padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em; */
+    width: 550px;
+}
+.homePic {
+    transition: .2s ease-in-out;
+}
+.homePic:hover {
+    transform: scale(1.1);
+}
+.test1 {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+.learn {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.learn li {
+    padding-right: 2em;
+}
+@media screen and (max-width: 1000px) {
+    .learn {
+        flex-wrap: wrap;
+    }
+}
+
+/* MEDIA QUERIES */
+/* projects on homepage */
+@media screen and (max-width: 1320px) {
+    .projects, .proj, .top2, .introPicAndText {
+        flex-wrap: wrap;
+        width: 854px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .projects, .projects div, .proj, .top2, .introPicAndText {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .projects, .projects div, .proj, .top2{
+        width: 400px;
+    }
+    .introPicAndText {
+        width: 90%;
+    }
+}
+
+/* .projects {
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.project1, .project2, .project3 {
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+/*text*/
+/* .box {
+    padding-right: 1em;
+}  */
+
+/* PROJECTS PAGE STYLES */
+.projects1 {
+    width: 900px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgb(162, 222, 230);
+}
+.projects1 p, .projects1 h2 {
+    /* color: white; */
+}
+@media screen and (max-width: 955px) {
+    .projects1 {
+        /* margin-left: 1em; */
+        /* margin-right: 1em; */
+        width: 92%;
+    }
+}
+
+/* WFSS project */
+.wfss {
+    background-color: lavender;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+}
+.wfss h2 {
+    text-align: center;
+}
+.projwfss {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.num, .num2 {
+    font-size: 30px;
+    font-weight: bold;
+    border: 3px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20px;
+}
+.num2 {
+    padding-right: 15px;
+}
+.part, .part2 {
+    display: grid;
+    grid-template-areas: "num h3";
+    width: 50px;
+    grid-gap: 20px;
+}
+.num, .num2 {
+    grid-area: num;
+    line-height: 60px;
+    padding-left: 20px;
+}
+.part h3, .part2 h3 {
+    grid-area: h3;
+    font-size: 35px;
+    line-height: 56px;
+}
+/* .part2 {
+    width: 405px;
+} */
+.bold {
+    font-weight: bold;
+}
+.sketches {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+.popup {
+    width: 884px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textcenter {
+    text-align: center;
+}
+@media screen and (max-width: 920px) {
+    .projwfss {
+        /* margin-left: 1em;
+        margin-right: 1em; */
+        width: 98%;
+    }
+    /* .test1 {
+        width: 98%;
+    } */
+    .sketch {
+        width: 50%;
+    }
+    .popup {
+        width: 95%;
+    }
+    .test1 {
+        width: 91%;
+    }
+}
+
+/*UNIX*/
+.unix {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.unixpic {
+    display: block;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 970px) {
+    .unix {
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 95%;
+    }
+}
+@media screen and (max-width: 730px) {
+    .unixpic {
+        width: 95%;
+    }
+}
+
+/* TRAVEL */
+.travel {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.travTitle {
+    font-style:italic;
+    font-size:20px;
+}
+.travFlex {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 185px 685px;
+    grid-template-areas: "title grid2";
+}
+.travTitle {
+    grid-area: title;
+    /* text-align: center; */
+}
+.grid2 {
+    grid-area: grid2;
+    padding-top: 2em;
+}
+.center {
+    text-align: center;
+}

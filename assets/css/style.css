@@ -1,7 +1,10 @@
 /* RENEE BOGDANY PORTFOLIO STYLES */
 
 /* DESKTOP STYLES */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap');
 
 body {
     margin: 0;
@@ -17,8 +20,9 @@ body {
 
 /* headings, paragraph, links */
 
-h1, h2, h3, p, a, li {
-    font-family: 'Roboto Slab', Georgia, 'Montserrat', sans-serif;
+h1, h2, h3, p, a, li, figcaption {
+    /* font-family: 'Roboto Slab', Georgia, 'Montserrat', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 p, li {
     line-height: 2em;
@@ -39,13 +43,19 @@ a:active {
 
 /* top of page */
 
+.title {
+    font-family: 'Amita', serif;
+}
+.top1 {
+    background-color: lightgray;
+}
 .top {
     margin-left: 20%;
     margin-bottom: 2em;
     margin-top: 2em;
 }
 .top2 {
-    margin-bottom: 2em;
+    margin-bottom: 1.25em;
     margin-top: 2em;
     width: 1306px;
     margin-left: auto;
@@ -61,14 +71,17 @@ a:active {
 .bogdanyPic {
     float: left;
     border-radius: 50%;
-    margin-top: .75em;
+    margin-top: 2.5em;
     margin-bottom: .75em;
     /* margin-left: 20%; */
     margin-right: 2.5em;
 }
 
 /* Heading / Navigation */
-
+.intro {
+    /* background-color: lavenderblush; */
+    background-color: #f8bbb1ee;
+}
 nav {
     display: flex;
     justify-content: space-around;
@@ -79,7 +92,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
 }
 nav a:hover {
     border-top: 2px solid currentColor;
@@ -101,7 +114,7 @@ nav a:hover {
 .textIntro {
     padding-top: .5em;
     padding-left: 1em;
-    line-height: 2.5em;
+    line-height: 2em;
     /* margin-right: 20%; */
 }
 .introPicAndText {
@@ -110,7 +123,7 @@ nav a:hover {
     margin-right: auto;
 }
 .links {
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 1em;
     clear: both;
     display: flex;
@@ -118,6 +131,10 @@ nav a:hover {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
+}
+.padTop {
+    display: inline-block;
+    padding-top: 1em;
 }
 .email {
     text-decoration: none;
@@ -135,47 +152,42 @@ nav a:hover {
 }
 
 /* Projects */
-.proj {
-    width: 1306px;
+.proj, .projects {
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.projects {
-    display: grid;
-    gap: 107px;
-    /* flex-wrap: wrap; */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4em;
-    grid-template-columns: 600px 600px;
-    grid-template-areas: "project1 project2"
-                         "project3";
-    width: 1306px;
+.homePic {
+    float: left;
 }
-.project1 {
-    grid-area: "project1";
+.project3, .project3 .homePic {
+    clear:both;
+    float:right;
 }
 .project2 {
-    grid-area: "project2";
+    clear:both;
 }
-.project3 {
-    grid-area: "project3";
+.homePic {
+    margin-right: 2em;
 }
-.projects div {
-    /* background-color: #bdaed6; */
-    /* padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em; */
-    width: 550px;
+.project3 .homePic {
+    margin-right: 0;
+    margin-left: 2em;
+}
+.project2, .project3 {
+    margin-top: 6em;
+    margin-bottom: 6em;
 }
 .homePic {
     transition: .2s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.homePic:hover {
-    transform: scale(1.1);
+.homePic:hover  {
+    transform: scale(1.01);
 }
+
 .test1 {
     border: 2px solid black;
     border-radius: 10px;
@@ -196,12 +208,20 @@ nav a:hover {
     }
 }
 
+
 /* MEDIA QUERIES */
 /* projects on homepage */
 @media screen and (max-width: 1320px) {
     .projects, .proj, .top2, .introPicAndText {
         flex-wrap: wrap;
         width: 854px;
+    }
+    .homePic {
+        float: none;
+    }
+    .project3 .homePic {
+        margin-left: 0;
+        float: none;
     }
 }
 @media screen and (max-width: 870px) {
@@ -214,6 +234,17 @@ nav a:hover {
         width: 400px;
     }
     .introPicAndText {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .homePic {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+    }
+    .project3 .homePic {
         width: 90%;
     }
 }
@@ -261,20 +292,23 @@ nav a:hover {
 
 /* WFSS project */
 .wfss {
-    background-color: lavender;
+    background-color: #f3afa5f5;
+    /* lavender; */
     width: 100%;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     margin-top: 2em;
 }
 .wfss h2 {
     text-align: center;
+    font-size: 30px;
 }
-.projwfss {
+.projwfss, .top3 {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .num, .num2 {
     font-size: 30px;
     font-weight: bold;
@@ -313,6 +347,15 @@ nav a:hover {
     text-align: center;
     font-size: 18px;
 }
+.sketch {
+    margin-right: .5em;
+    border: solid 2px gray;
+}
+.sketchPics {
+    width: 825px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .popup {
     width: 884px;
     margin-left: auto;
@@ -321,8 +364,9 @@ nav a:hover {
 .textcenter {
     text-align: center;
 }
+
 @media screen and (max-width: 920px) {
-    .projwfss {
+    .projwfss, .top3 {
         /* margin-left: 1em;
         margin-right: 1em; */
         width: 98%;
@@ -330,14 +374,37 @@ nav a:hover {
     /* .test1 {
         width: 98%;
     } */
+    /* .sketch {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+    .sketchPics {
+        width: 344px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .sketch {
-        width: 50%;
+        width:344px;
+        margin-right: auto;
+        margin-left: auto;
     }
     .popup {
         width: 95%;
     }
     .test1 {
         width: 91%;
+    }
+    .research {
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .researchPic {
+        width: 25%;
+    }
+    .arrow {
+        width: 10%;
     }
 }
 
@@ -360,7 +427,7 @@ nav a:hover {
         width: 95%;
     }
 }
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 900px) {
     .unixpic {
         width: 95%;
     }
@@ -392,4 +459,36 @@ nav a:hover {
 }
 .center {
     text-align: center;
+}
+@media screen and (max-width: 910px) {
+    .travFlex {
+        display: block;
+        padding-top: 1em;
+    }
+    .travel {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid2 {
+        padding-bottom: 2em;
+        padding-top: 0em;
+    }
+}
+
+/* FOOTER STYLES */
+
+.footer {
+    background-color: #f3afa5f5;
+    clear: both;
+    margin-top: 20em;
+    height: 5em;
+}
+.footerText {
+    text-align: center;
+    padding-top: .5em;
+}
+
+.bold {
+    font-weight: bold;
 }

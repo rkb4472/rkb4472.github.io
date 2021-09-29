@@ -462,16 +462,16 @@ nav a:hover {
         width: 91%;
     }
     .research {
-        width: 200px;
+        width: 300px;
         margin-right: auto;
         margin-left: auto;
     }
     .researchPic {
-        width: 30%;
+        width: 35%;
     }
     .arrow {
         width: 10%;
-        padding-bottom: 25px;
+        padding-bottom: 35px;
     }
 }
 
@@ -485,20 +485,20 @@ nav a:hover {
 
 @media screen and (max-width: 500px) {
     .researchPic {
-        width: 75px;
+        width: 100px;
     }
     .arrow {
         width: 10%;
-        padding-bottom: 25px;
+        padding-bottom: 35px;
     }
 }
 @media screen and (max-width: 400px) {
     .researchPic {
-        width: 18%;
+        width: 40%;
     }
     .arrow {
         width: 8%;
-        padding-bottom: 25px;
+        padding-bottom: 35px;
     }
     .sketchPics {
         width: 100%;

@@ -493,12 +493,15 @@ nav a:hover {
     }
 }
 @media screen and (max-width: 400px) {
+    .research {
+        width: 100%;
+    }
     .researchPic {
         width: 40%;
     }
     .arrow {
         width: 8%;
-        padding-bottom: 35px;
+        padding-bottom: 30px;
     }
     .sketchPics {
         width: 100%;

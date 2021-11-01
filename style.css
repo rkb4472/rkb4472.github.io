@@ -29,7 +29,6 @@ p, li {
 }
 a:link {
     color: black;
-
 }
 a:visited {
     color: purple;
@@ -39,6 +38,9 @@ a:hover {
 }
 a:active {
     color: blue;
+}
+nav a:visited {
+    color: black;
 }
 
 /* top of page */
@@ -57,7 +59,7 @@ a:active {
 .top2 {
     margin-bottom: 1.25em;
     margin-top: 2em;
-    width: 1306px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -71,10 +73,11 @@ a:active {
 .bogdanyPic {
     float: left;
     border-radius: 50%;
-    margin-top: 2.5em;
-    margin-bottom: .75em;
+    /* margin-top: 2.5em; */
+    margin-bottom: .5em;
     /* margin-left: 20%; */
     margin-right: 2.5em;
+    border: 2px solid black;
 }
 
 /* Heading / Navigation */
@@ -202,10 +205,17 @@ nav a:hover {
 .learn li {
     padding-right: 2em;
 }
+.introPicAndText {
+    padding-bottom: 2em;
+}
+
 @media screen and (max-width: 1000px) {
     .learn {
         flex-wrap: wrap;
     }
+}
+.about {
+    margin-left: .1em;
 }
 
 
@@ -228,17 +238,20 @@ nav a:hover {
     .projects, .projects div, .proj, .top2, .introPicAndText {
         width: 600px;
     }
+    .homePic, .project3 {
+        float: none;
+    }
 }
 @media screen and (max-width: 620px) {
     .projects, .projects div, .proj, .top2{
-        width: 400px;
+        width: 90%;
     }
     .introPicAndText {
         width: 90%;
     }
 }
-@media screen and (max-width: 700px) {
-    .homePic {
+@media screen and (max-width: 620px) {
+    /* .homePic {
         width: 90%;
         margin-right: auto;
         margin-left: auto;
@@ -246,6 +259,53 @@ nav a:hover {
     }
     .project3 .homePic {
         width: 90%;
+    } */
+    .introPicAndText {
+        width: 90%;
+    }
+    .homePic {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 620px) {
+    .bogdanyPic {
+        float: none;
+    }
+    .about {
+        text-align: center;
+        margin-left: 0;
+    }
+    .pic {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav a {
+        margin-bottom: 1em;
+    }
+    .n1 {
+        width: 57px;
+    }
+    .n2 {
+        width: 95px;
+    }
+    .n3 {
+        width: 77px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .introPicAndText,.projects, .projects div, .proj, nav, .top2 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -364,6 +424,14 @@ nav a:hover {
 .textcenter {
     text-align: center;
 }
+.arrow {
+    padding-bottom: 56px;
+}
+.research {
+    width:550px;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 @media screen and (max-width: 920px) {
     .projwfss, .top3 {
@@ -396,15 +464,54 @@ nav a:hover {
         width: 91%;
     }
     .research {
-        width: 50%;
+        width: 300px;
         margin-right: auto;
         margin-left: auto;
     }
     .researchPic {
-        width: 25%;
+        width: 35%;
     }
     .arrow {
         width: 10%;
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .projwfss, .top3, .unix, .travel {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .researchPic {
+        width: 100px;
+    }
+    .arrow {
+        width: 10%;
+        padding-bottom: 35px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .research {
+        width: 100%;
+    }
+    .researchPic {
+        width: 40%;
+    }
+    .arrow {
+        width: 8%;
+        padding-bottom: 30px;
+    }
+    .sketchPics {
+        width: 100%;
+    }
+    .sketch {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -481,7 +588,6 @@ nav a:hover {
 .footer {
     background-color: #f3afa5f5;
     clear: both;
-    margin-top: 20em;
     height: 5em;
 }
 .footerText {
@@ -491,4 +597,43 @@ nav a:hover {
 
 .bold {
     font-weight: bold;
+}
+.contact {
+    display: flex;
+    flex-wrap: flex-wrap;
+    justify-content: space-around;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15em;
+    margin-bottom: 1em;
+}
+.contact2 {
+    margin-top: 7em;
+    display: flex;
+    flex-wrap: flex-wrap;
+    justify-content: space-around;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+@media screen and (max-width: 900px) {
+    .contact {
+        margin-top: 7em;
+    }
+    .contact2 {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        margin-top: 5em;
+    }
+}
+@media screen and (max-width: 250px) {
+    .contact, .contact2 {
+        width: 100%;
+    }
 }
